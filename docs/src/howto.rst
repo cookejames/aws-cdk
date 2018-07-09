@@ -56,3 +56,69 @@ where **abcdwxyz** is the unique, 8-character hash that the |cdk| generates for 
          "BucketName": "mybucket"
       }
    }
+
+.. _how_to_add_a_stack:
+
+How do I Add a Stack to My App?
+===============================
+
+To add a stack to your app,
+create a new class that extends the
+::py:class:`_aws-cdk_core.Stack` class,
+as shown in the following example.
+
+.. code-block:: js
+
+   import { Stack, StackProps } from '@aws-cdk/core';
+   // ...
+   class HelloStack extends Stack {
+      constructor(parent: App, name: string, props?: StackProps) {
+         super(parent, name, props);
+      }
+   }
+
+.. _how_to_create_stack_in_region:
+
+How do I Create a Stack in a Specific Region?
+=============================================
+
+To create a stack in **us-west-2** in your app,
+and set the **region** property of the **env**
+member of the **StackProps** argument to your stack when creating it,
+as shown in the following example.
+
+.. code-block:: js
+
+   new HelloStack(this, 'hello-cdk-us-west-2', {
+      env: {
+         region: 'us-west-2'
+   }});
+
+.. _how_to_azs:
+
+How do I Get the Availability Zones in a Region?
+================================================
+
+You can get the AZs in the current region by using the
+::py:class:`_aws-cdk_core.AvailabilityZoneProvider` class,
+as shown in the following example.
+
+.. code-block:: js
+
+   const zones: string[] = new AvailabilityZoneProvider(this).availabilityZones;
+
+   for (let zone of zones) {
+      // do somethning for each zone!
+   }
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+
+.. _how_to_:
+
+How do I ?
+========================================
+
