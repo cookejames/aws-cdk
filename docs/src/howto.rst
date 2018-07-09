@@ -111,11 +111,152 @@ as shown in the following example.
       // do somethning for each zone!
    }
 
+.. _how_to_opt_out:
+
+How do I Opt Out of Usage Tracking?
+===================================
+
+// What was the innocuous name we gave this?
+
+.. _how_to_write_secrets:
+
+How do I Store my Secret Data?
+==============================
+
+Info on storing/retrieving secret data?
+
+.. code-block:: sh
+
+   cdk write-secret STACK Username=NAME Password=PASSWORD
+
+.. _how_to_use_cfn_template_different_region:
+
+How do I use an Existing |CFN| Template in a Different Region?
+==============================================================
+
+Is this even possible? Planned?
+
+.. _how_to_create_nested_stack:
+
+How do I Create a Nested Stack?
+===============================
+
+If we create a section in another topic,
+should this just be a link to that section?
+
+.. _how_to_see_my_metrics:
+
+How do I See my Metrics?
+========================
+
+If we gather data, do we think users will want to see it?
+
+.. _how_to_tag_resources:
+
+How do I Tag my Resources?
+==========================
+
+and use that info
+
 .. _how_to_:
 
 How do I ?
 ========================================
 
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
+
+.. _how_to_:
+
+How do I ?
+========================================
 
 .. _how_to_:
 
