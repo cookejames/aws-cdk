@@ -10,6 +10,8 @@
 
 .. note:: These instructions are only for the Amazon-internal preview of the |cdk|.
 
+To-do: port the three existing, TypeScript-only examples to the other programming languages we support.
+
 .. _how_to:
 
 ######################################
@@ -158,105 +160,137 @@ How do I Tag my Resources?
 
 and use that info
 
-.. _how_to_:
+.. _how_to_add_runtime:
 
-How do I ?
-========================================
+How do I Access Deploy Time Values?
+===================================
 
-.. _how_to_:
+SSM? Environent variables? cdk.json?
 
-How do I ?
-========================================
+.. _how_to_integrate_with_my_ide:
 
-.. _how_to_:
+How do I Use the |cdk| in My IDE?
+=================================
 
-How do I ?
-========================================
+Which IDEs should be support with setup instructions?
+Paul's already got Cloud9 going,
+what about VS Code, Eclipse, NetBeans, Visual Studio?
 
-.. _how_to_:
+.. _how_to_cross_accounts:
 
-How do I ?
-========================================
+How do I Work Across Accounts?
+==============================
 
-.. _how_to_:
+Question from a user:
 
-How do I ?
-========================================
+How can I trigger a Lambda function running in a VPC in Account A
+from an SNS topic in Account B?
 
-.. _how_to_:
+.. _how_to_cross_regions:
 
-How do I ?
-========================================
+How do I Work Across Regions?
+=============================
 
-.. _how_to_:
+Related: How to ensure service is available in a region.
 
-How do I ?
-========================================
+.. _how_to_debug:
 
-.. _how_to_:
+How do I Debug my |cdk| App?
+============================
 
-How do I ?
-========================================
+Tools & Techniques, logging, ???
 
-.. _how_to_:
+.. _how_to_estimate_costs:
 
-How do I ?
-========================================
+How do I Estimate my Stack's Cost?
+==================================
 
-.. _how_to_:
+Or is this a CFN issue?
 
-How do I ?
-========================================
+.. _how_to_share_resources:
 
-.. _how_to_:
+How do I Share Resources Between Stack?
+=======================================
 
-How do I ?
-========================================
+Or other constructs?
 
-.. _how_to_:
+.. _how_to_create_large_apps:
 
-How do I ?
-========================================
+How do I Create a Large-Scale APP?
+==================================
 
-.. _how_to_:
+// Probably not just a how-to, but a section in a topic or an entire topic?
 
-How do I ?
-========================================
+.. _how_to_overcome_200_limit:
 
-.. _how_to_:
+How do I Overcome the |CFN| 200 Resource Limit?
+===============================================
 
-How do I ?
-========================================
+Related to sub-stacks?
 
-.. _how_to_:
+.. _how_to_request_service_l2:
 
-How do I ?
-========================================
+How do I Request an |l2| Construct?
+===================================
 
-.. _how_to_:
+Since we won't have 100% coverage at GA,
+what's the recommended way for users to ask for a missing |l2| construct?
+GitHub PR/Issue?
 
-How do I ?
-========================================
+.. _how_to_link_lambda_code:
 
-.. _how_to_:
+How do I Link the Code for a Lambda Function to an AWS Lambda Resource?
+=======================================================================
 
-How do I ?
-========================================
+Inquiring minds want to know.
 
-.. _how_to_:
+.. _how_to_transition:
 
-How do I ?
-========================================
+How do I Port My |CFN| Template to the |cdk|?
+=============================================
 
-.. _how_to_:
+We should map out a couple of scenarios:
 
-How do I ?
-========================================
+- Leave existing templates alone and add new functionality using the |cdk|.
 
-.. _how_to_:
+- Refactor existing templates into opinionated constructs where possible.
 
-How do I ?
-========================================
+- ???
+
+.. _how_to_modify_l2:
+
+How do I Modify an |l2| Construct?
+==================================
+
+For example, before we supported AES256 in S3,
+how would the user get that functionality?
+Fork our S3 |l2| construct and make a change?
+
+.. _how_to_create_l3:
+
+How do I Create a |l3| Library?
+===============================
+
+We used to have Goldberg as a proof of concept.
+Do we have a replacement?
+
+I don't see |l3| in the glossary.
+Is that by design?
+
+.. _how_to_ensure_service_is_available:
+
+How do I Ensure a Service is Available?
+=======================================
+
+Some services/features are not available in certain regions.
+How can the user know whether they've selected the right region?
+
+.. _how_to_use_metrics_as_guardrail:
+
+How do I Use Metrics as Guardrails?
+===================================
+
+I don't want to inadvertently create enormous cost.
 
 .. _how_to_:
 
