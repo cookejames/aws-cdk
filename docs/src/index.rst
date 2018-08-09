@@ -42,4 +42,3 @@ User Guide
    Python: PyPI
    PHP: Pear?
    Ruby: Gem
-
