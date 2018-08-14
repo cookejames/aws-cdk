@@ -210,22 +210,14 @@ export class Pipeline extends cdk.Construct implements events.IEventRuleTarget {
         ]);
     }
 
-    /**
-     * If a stage is added as a child, add it to the list of stages.
-     * TODO: This is a hack that should be removed once the CDK has an
-     *       onChildAdded type hook.
-     * @override
-     */
-    protected addChild(child: cdk.Construct, name: string) {
-        super.addChild(child, name);
-        if (child instanceof Stage) {
-            this.appendStage(child);
+    public _addStage(stage: Stage): void {
+        // _addStage should be idempotent, in case a customer ever calls it directly
+        if (this.stages.includes(stage)) {
+            return;
         }
-    }
 
-    private appendStage(stage: Stage) {
-        if (this.stages.find(x => x.id === stage.id)) {
-            throw new Error(`A stage with name '${stage.id}' already exists`);
+        if (this.stages.find(x => x.name === stage.name)) {
+            throw new Error(`A stage with name '${stage.name}' already exists`);
         }
 
         this.stages.push(stage);
