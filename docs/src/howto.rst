@@ -8,9 +8,7 @@
    either express or implied. See the License for the specific language governing permissions and
    limitations under the License.
 
-.. note:: These instructions are only for the Amazon-internal preview of the |cdk|.
-
-To-do: port the three existing, TypeScript-only examples to the other programming languages we support.
+.. To-do: port the three existing, TypeScript-only examples to the other programming languages we support.
 
 .. _how_to:
 
@@ -35,17 +33,25 @@ The following example includes the template *my-template.json* into the
 existing app and gets the ARN of the bucket **mybucket** from the
 template.
 
+First make sure you have the |S3|, |IAM|, and ??? packages installed.
+
 .. code-block:: js
 
-   import { FnGetAtt } from '@aws-cdk/core'
-   import { readFileSync } from 'fs'
+    npm i -g 
 
-   new Include(this, 'ExistingInfra', {
-        template: JSON.parse(readFileSync('my-template.json').toString))
-   });
+.. code-block:: js
 
-   // To get the bucket's ARN:
-   const bucketArn = new FnGetAtt('mybucket', 'Arn');
+    import cdk = require('@aws-cdk/cdk');
+    import fs = require('fs');
+
+    const myTemplate = fs.readFileSync('my-template.json').toString();
+
+    new cdk.Include(this, 'ExistingInfra', {
+        template: JSON.parse(myTemplate)
+    });
+    
+    // To get the bucket's ARN:
+    const bucketArn = new cdk.FnGetAtt('mybucket', 'Arn');
 
 The *my-template.json' must have the following resource,
 where **abcdwxyz** is the unique, 8-character hash that the |cdk| generates for the resource:
